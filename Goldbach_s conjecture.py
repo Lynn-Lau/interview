@@ -5,7 +5,7 @@
 # Date: 2016/09/12
 '''
 任何一个大于2的正整数都可以写成两个质数之和,
-通过Python验证这一猜想。求出某正整数是两个质数和的对数。
+通过Python验证这一猜想。
 '''
 
 import math
@@ -23,7 +23,7 @@ primelist = list()
 for j in range(2, 1000):
     if isprime(j):
         primelist.append(j)
-# print primelist
+#print primelist
 
 def sum(data):
     count = 0
@@ -31,6 +31,8 @@ def sum(data):
         for n in range(m, len(primelist)):
             if primelist[m] + primelist[n] == data:
                 count = count + 1
+                print "%d = %d + %d" %(data, primelist[m], primelist[n])
+
 
     return count
 
